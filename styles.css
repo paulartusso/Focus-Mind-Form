@@ -25,25 +25,37 @@ main img{
     align-items: center;
 }
 
-#input-container > input, #input-container > textarea{
-    width: 75%;
+#input-container div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputs{
+    width: 80%;
     padding: 20px;
     margin-top: 25px;
     border: none;
     border-radius: 2px;
 }
 
+#date-input{
+    display: none;
+}
+
 #buttons-container{
     display: flex;
-    justify-content: space-between;
-    width: 80%;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 #buttons-container button{
     margin-top: 70px;
     border-radius: 2px;
     padding: 15px;
-    width: 45%;
+    width: 35%;
     font-size: 20px;
 }
 
@@ -77,6 +89,9 @@ main img{
     display: none;
 }
 
+.gender-container {
+    display: none!important;
+}
 .error-message{
     color: white;
     font-size: 14px;
@@ -86,5 +101,118 @@ main img{
 .show-error{
     border: 2px solid #a7300c  !important ;
 }
+
+.background{
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.767);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-family: Montserrat, 'sans-serif';
+    font-size: 16px;
+    font-weight: 500;
+}
+.background.hidden{
+    display: none !important;
+}
+
+.gif{
+    width: 75px;
+}
+
+@media (min-width: 700px){
+    #input-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .name-inputs-div{
+        width: 30% !important;
+        border: none;
+        border-radius: 2px;
+    }
+    .name-inputs-div input{
+        width: 85%;
+    }
+    .gender-container {
+        display: flex!important;
+        color: #ffffff;
+        font-family: Montserrat, 'sans-serif';
+        align-items: flex-start!important;
+        padding-left: 10%;
+    }
+
+    #date-input{
+        width: 22%;
+        display: block;
+        padding: 20px;
+        margin-top: 25px;
+        border: none;
+        border-radius: 2px;
+        height: 55px;
+        box-sizing: border-box;
+    }
+
+    #input-container #country-container-div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        width: 84%;
+    }
+
+    #country{
+        display: block;
+        width: 45%;
+        border: none;
+        border-radius: 2px;
+        height: 55px;
+        box-sizing: border-box;
+    }
+
+    #input-container #phone-container{
+        width: 53%;
+    }
+
+    #input-container #phone-container #phone-input{
+        margin: 0;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    #input-container #radio-buttons{
+        display: flex;
+        flex-direction: row;
+        width: auto;
+    }
+
+    #buttons-container{
+        justify-content: flex-end;
+    }
+
+
+    #buttons-container button{
+        width: 200px;
+        margin-right: 50px;
+    }
+
+    #buttons-container #send-button{
+        margin-right: 100px;
+    }
+    .background{
+        font-size: 34px;
+    }
+}
+
 
 

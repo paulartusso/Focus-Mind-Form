@@ -8,27 +8,72 @@
     <body onload="load()"> 
         <main>
             <div id="input-container">
-                <input type="text" id="name-input" placeholder="Nombre*"/>
-                <p class="hidden error-message" id="name-error"> Queremos saber tu nombre! </p>
-
-                <input type="text" id="surname-input" placeholder="Apellido*"/>
-                <p class="hidden error-message" id="surname-error"> Tu apellido es importante! </p>
-
-                <input type="number" id="phone-input" placeholder="Telefono*"/>
-                <p class="hidden error-message" id="phone-error"> Por favos, ingresa un telefono valido </p>
-
-                <input type="text" id="email-input" placeholder="Email*"/>
-                <textarea placeholder="Comentarios" id="comments"></textarea>
-
-                <div id="buttons-container">
-                    <button id="cancel-button">
-                        Cancelar
-                    </button>
-                    <button id="send-button" onclick="sendData()">
-                        Enviar
-                    </button>
+                <div class="name-inputs-div">
+                    <input type="text" id="name-input" placeholder="Nombre*" class="inputs"/>
+                    <p class="hidden error-message" id="name-error"> Queremos saber tu nombre! </p>
                 </div>
+
+                <div class="name-inputs-div">
+                    <input type="text" id="surname-input" placeholder="Apellido*" class="inputs name-inputs"/>
+                    <p class="hidden error-message" id="surname-error"> Tu apellido es importante! </p>
+                </div>
+
+                <input type="date" id="date-input"/>
+
+                <div class="gender-container">
+                    <p>Con que genero te identificas?</p>
+                    <div id="radio-buttons">
+                        <label> Mujer
+                            <input type="radio" name="gender" value="Mujer" placeholder=""/>
+                        </label>
+                        <label> Hombre
+                            <input type="radio" name="gender" value="Hombre" placeholder=""/>
+                        </label>
+                        <label> Otro
+                            <input type="radio" name="gender" value="Otro" placeholder=""/>
+                        </label>
+                    </div>
+                </div>
+
+                <div id="country-container-div">
+                    <select id="country" class="hidden">
+                        <option value="Argentina">Argentina</option>
+                        <option value="Bolivia">Bolivia</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="Peru">Peru</option>
+                        <option value="Paraguay">Paraguay</option>
+                    </select>     
+                    
+                    <div id="phone-container">
+                        <input type="number" id="phone-input" placeholder="Telefono*" class="inputs"/>
+                        <p class="hidden error-message" id="phone-error"> Por favor, ingresa un telefono valido </p>
+                    </div>
+                </div>
+
+
+                <div>
+                    <input type="text" id="email-input" placeholder="Email*" class="inputs"/>
+                    <p class="hidden error-message" id="email-error"> Por favor, ingresa un correo valido!</p>
+                </div>
+
+                <textarea placeholder="Comentarios" id="comments" class="inputs"></textarea>
+
+
+            </div>
+                    <div id="buttons-container">
+                        <button id="cancel-button">
+                            Cancelar
+                        </button>
+                        <button id="send-button" onclick="sendData()">
+                            Enviar
+                        </button>
             </div>
         </main>
+
+        <div id="success" class="hidden background">
+            <img src="assets/success.gif" class="gif">
+        </div>
     </body>
 </html>
