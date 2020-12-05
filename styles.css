@@ -1,0 +1,90 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}  
+
+main{
+    background-image: url(assets/1_o8tTGo3vsocTKnCUyz0wHA.jpeg);
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-top: 60px;
+}
+
+main img{
+    width: 100%;
+}
+
+#input-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#input-container > input, #input-container > textarea{
+    width: 75%;
+    padding: 20px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 2px;
+}
+
+#buttons-container{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+#buttons-container button{
+    margin-top: 70px;
+    border-radius: 2px;
+    padding: 15px;
+    width: 45%;
+    font-size: 20px;
+}
+
+#cancel-button{
+    border: none;
+    border-bottom: 2px solid #dfac06; 
+    background-color: transparent;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+#cancel-button:hover{
+    border-bottom: 2px solid #c29503; 
+    background-color:#c29503;
+}
+
+#send-button{
+    border: none; 
+    border-bottom: 2px solid #075174;
+    background-color: #075174;
+    transition: all 0.3s ease-in-out;
+    color: #ffffff;
+}
+#send-button:hover{
+    border-bottom: 2px solid #06354b;
+    background-color: #06354b;
+}
+
+/**inline errors**/
+
+.hidden{
+    display: none;
+}
+
+.error-message{
+    color: white;
+    font-size: 14px;
+    margin: 5px 0 0 0;
+}
+
+.show-error{
+    border: 2px solid #a7300c  !important ;
+}
+
+
