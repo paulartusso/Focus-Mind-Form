@@ -1,7 +1,12 @@
 html, body{
     margin: 0;
     padding: 0;
+    font-family: "Montserrat", sans-serif;
 }  
+
+input, textarea, button, select, label, div, p{
+    font-family: "Montserrat", sans-serif;
+}
 
 main{
     background-image: url(assets/1_o8tTGo3vsocTKnCUyz0wHA.jpeg);
@@ -39,6 +44,7 @@ main img{
     margin-top: 25px;
     border: none;
     border-radius: 2px;
+    box-sizing: border-box;
 }
 
 #date-input{
@@ -134,20 +140,32 @@ main img{
         justify-content: center;
         align-items: flex-start;
     }
+    .name-date-container {
+        box-sizing: border-box;
+        width: 80%!important;
+        flex-direction: row!important;
+        justify-content: space-between!important;
+    }
     .name-inputs-div{
-        width: 30% !important;
+        width: 37% !important;
         border: none;
         border-radius: 2px;
+        box-sizing: border-box;
     }
     .name-inputs-div input{
-        width: 85%;
+        width: 100%;
     }
     .gender-container {
         display: flex!important;
         color: #ffffff;
-        font-family: Montserrat, 'sans-serif';
+        font-family: "Montserrat", sans-serif;
+        font-size: 24px;
         align-items: flex-start!important;
         padding-left: 10%;
+    }
+
+    #radio-buttons label{
+        margin-left: 30px;
     }
 
     #date-input{
@@ -168,7 +186,8 @@ main img{
         align-items: flex-start;
         flex-wrap: wrap;
         margin-top: 30px;
-        width: 84%;
+        width: 80%;
+        box-sizing: border-box;
     }
 
     #country{
